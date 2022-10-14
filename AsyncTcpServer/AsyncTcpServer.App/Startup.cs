@@ -61,5 +61,10 @@ namespace AsyncTcpServer.App
                 _listener?.Stop();
             }
         }
+
+        public void Stop()
+        {
+            _listener?.Stop();
+        } 
     }
 }

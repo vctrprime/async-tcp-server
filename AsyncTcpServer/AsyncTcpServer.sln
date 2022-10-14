@@ -6,6 +6,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.Domain", "As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.Services", "AsyncTcpServer.Services\AsyncTcpServer.Services.csproj", "{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{02F2925F-FC0A-42C1-9329-5FEB21CEA4B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.UnitTests", "AsyncTcpServer.UnitTests\AsyncTcpServer.UnitTests.csproj", "{E09D5A10-C136-4E85-8AC1-1A729932F7CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.IntegrationTests", "AsyncTcpServer.IntegrationTests\AsyncTcpServer.IntegrationTests.csproj", "{80A640BF-F241-4CA2-A8C7-C901485B5D77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +30,17 @@ Global
 		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E09D5A10-C136-4E85-8AC1-1A729932F7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E09D5A10-C136-4E85-8AC1-1A729932F7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E09D5A10-C136-4E85-8AC1-1A729932F7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E09D5A10-C136-4E85-8AC1-1A729932F7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A640BF-F241-4CA2-A8C7-C901485B5D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A640BF-F241-4CA2-A8C7-C901485B5D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A640BF-F241-4CA2-A8C7-C901485B5D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A640BF-F241-4CA2-A8C7-C901485B5D77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E09D5A10-C136-4E85-8AC1-1A729932F7CA} = {02F2925F-FC0A-42C1-9329-5FEB21CEA4B6}
+		{80A640BF-F241-4CA2-A8C7-C901485B5D77} = {02F2925F-FC0A-42C1-9329-5FEB21CEA4B6}
 	EndGlobalSection
 EndGlobal

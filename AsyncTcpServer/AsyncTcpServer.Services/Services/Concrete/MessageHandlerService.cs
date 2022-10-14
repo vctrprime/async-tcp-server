@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using AsyncTcpServer.Domain;
 using AsyncTcpServer.Services.Services.Abstract;
 
 namespace AsyncTcpServer.Services.Services.Concrete
@@ -9,9 +10,11 @@ namespace AsyncTcpServer.Services.Services.Concrete
     {
         public async Task<string> Handle(string message)
         {
+            if (string.IsNullOrEmpty(message)) throw new ArgumentException(Errors.INCORECT_MESSAGE);
+            
             var messageData = message.Replace("\n", "");
             
-            if (messageData.Length < 2) throw new ArgumentException("Ошибка входящего сообщения!");
+            if (messageData.Length < 2) throw new ArgumentException(Errors.INCORECT_MESSAGE);
 
             var commandNumber = messageData[0];
             messageData = messageData.Substring(1, messageData.Length - 1);
@@ -22,7 +25,7 @@ namespace AsyncTcpServer.Services.Services.Concrete
                 '1' => new string(messageData.Reverse().ToArray()),
                 '2' => messageData.ToUpper(),
                 '3' => messageData.ToLower(),
-                _ => throw new ArgumentException("Такой команды не существует!")
+                _ => throw new ArgumentException(Errors.INCORRECT_COMMAND)
             };
 
             //имитация долгого выполнения действия

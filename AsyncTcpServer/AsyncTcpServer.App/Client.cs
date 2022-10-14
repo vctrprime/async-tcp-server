@@ -10,7 +10,7 @@ namespace AsyncTcpServer.App
     public class Client
     {
         private readonly ILogger _logger;
-        private readonly TcpClient _client;
+        private readonly TcpClient _tcpClient;
         private readonly IMessageHandlerService _messageHandlerService;
         
         public string ClientName { get; private set; }
@@ -19,10 +19,10 @@ namespace AsyncTcpServer.App
         
         private NetworkStream _stream;
 
-        public Client(ILogger logger, TcpClient client, IMessageHandlerService messageHandlerService)
+        public Client(ILogger logger, TcpClient tcpClient, IMessageHandlerService messageHandlerService)
         {
             _logger = logger;
-            _client = client;
+            _tcpClient = tcpClient;
             _messageHandlerService = messageHandlerService;
             
             IsActive = true;
@@ -41,7 +41,7 @@ namespace AsyncTcpServer.App
             try
             {
 
-                _stream = _client.GetStream();
+                _stream = _tcpClient.GetStream();
 
                 while (true)
                 {
@@ -69,7 +69,7 @@ namespace AsyncTcpServer.App
             catch
             {
                 _stream?.Close();
-                _client?.Close();
+                _tcpClient?.Close();
                 IsActive = false;
                 _logger.LogWarning($"{ClientName} отключился");
             }
