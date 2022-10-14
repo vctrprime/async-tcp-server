@@ -49,20 +49,14 @@ namespace AsyncTcpServer.IntegrationTests
             var server = new Startup(_appConfig, _logger, _messageHandlerService);
             server.Run();
             
-            var response = string.Empty;
-            var task = Task.Factory.StartNew(() =>
-            {
-                response = ConnectAndGetResponse(message);
-            });
+            var response = ConnectAndGetResponse(message);
 
-            task.Wait();
-            
             Assert.Equal(expected, response);
             server.Stop();
         }
         
         [Fact]
-        public void ExecuteTwoClientsCalls()
+        public void ExecuteDifferentClientsCalls()
         {
             var server = new Startup(_appConfig, _logger, _messageHandlerService);
             server.Run();
