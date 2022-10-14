@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.App", "AsyncTcpServer.App\AsyncTcpServer.App.csproj", "{2803F416-973D-43BF-AD11-46C172237817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.Domain", "AsyncTcpServer.Domain\AsyncTcpServer.Domain.csproj", "{44A89F8F-717E-41E9-BF55-DEADF2DB7E36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTcpServer.Services", "AsyncTcpServer.Services\AsyncTcpServer.Services.csproj", "{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{2803F416-973D-43BF-AD11-46C172237817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2803F416-973D-43BF-AD11-46C172237817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2803F416-973D-43BF-AD11-46C172237817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A89F8F-717E-41E9-BF55-DEADF2DB7E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A89F8F-717E-41E9-BF55-DEADF2DB7E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A89F8F-717E-41E9-BF55-DEADF2DB7E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A89F8F-717E-41E9-BF55-DEADF2DB7E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1158B6F3-1DF7-4A6D-8D97-BFADB2D1AFD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
