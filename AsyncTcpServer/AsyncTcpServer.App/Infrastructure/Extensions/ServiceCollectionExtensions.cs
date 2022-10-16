@@ -18,9 +18,10 @@ namespace AsyncTcpServer.App.Infrastructure.Extensions
         public static IServiceCollection RegisterModules(this IServiceCollection services, IConfiguration config)
         {
             services
-                .RegisterConfiguration(config)   
-                .RegisterServices()
-                .RegisterLogging();
+                .RegisterConfiguration(config)
+                .RegisterServices();
+
+            RegisterLogger();
                 
 
             return services;
@@ -53,15 +54,13 @@ namespace AsyncTcpServer.App.Infrastructure.Extensions
             return services;
         }
         
-        private static IServiceCollection RegisterLogging(this IServiceCollection services)
+        private static void RegisterLogger()
         {
             Serilog.Debugging.SelfLog.Enable(msg => Console.WriteLine($"Logging Process Error: {msg}"));
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
                 .CreateLogger();
-
-            return services;
         }
     }
 }
